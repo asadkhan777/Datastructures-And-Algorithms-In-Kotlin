@@ -1,3 +1,3 @@
 package com.asadkhan.algorithms
 
-class AlgorithmBase
+object AlgorithmBase
