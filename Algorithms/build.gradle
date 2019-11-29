@@ -1,0 +1,25 @@
+apply plugin: "java-library"
+apply plugin: "kotlin"
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.5.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.5.2"
+
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+test {
+    useJUnitPlatform()
+}
